@@ -21,6 +21,7 @@ test_dataloader = DataLoader(test_data, batch_size= BATCH_SIZE, shuffle=False)
 
 # get the model
 model_0 = get_resnet18(10,pretrained=True).to(device)
+model_0.load_state_dict(torch.load("saved_models/resnet18_cifar10.pth", map_location=device,weights_only= True))
 
 # set optimizer and loss func
 optimizer = torch.optim.Adam(model_0.parameters(),lr = LR)
