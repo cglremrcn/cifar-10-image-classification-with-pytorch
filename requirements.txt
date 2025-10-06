@@ -1,0 +1,9 @@
+torch
+torch.nn
+torchvision
+torch.optim
+torchmetrics
+torch.utils.data 
+mlxtend
+matplotlib
+tqdm
